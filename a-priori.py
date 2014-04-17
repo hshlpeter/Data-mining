@@ -104,45 +104,12 @@ def a_priori_freq_items(basket_item,support,output_file_name):   #A-PriopiËã·¨ºË
                         
             
 if __name__=='__main__' :
-    
-    all_items=[[i] for i in range(1,7)]
-    pair_items=get_pair_matrix(all_items)
-    
-    basket_item=[[1,2,3],[2,3,4],[3,4,5],[4,5,6],
-                 [1,3,5],[2,4,6],[1,3,4],[2,4,5],
-                 [3,5,6],[1,2,4],[2,3,5],[3,4,6]]
-
-   # for item in all_items:
-   #     print 'item %s support is:' %item,get_item_freqNum(basket_item,item)
-
-    for pair_item in pair_items:
-        #print 'item %s support is:' %pair_item,get_item_freqNum(basket_item,pair_item)
-        if (get_item_freqNum(basket_item,pair_item)>=4) :
-            print 'freq itemset %s will hash to %d bucket' %(pair_item,(pair_item[0]*pair_item[1])%11)
-
-    '''
-    items=[[i] for i in range(1,21)]
-    a=get_pair_matrix(items)
-    print 'items number is 20, the pair of a[100] is:',a[100]
-    '''
-    '''
     N=100
     support=5    
     basket_item=get_basket_item(N)
     output_file_name='freq_itemset.txt'
     a_priori_freq_items(basket_item,support,output_file_name)
-    '''
     
-    '''    
-    itemA=[5,7]
-    itemB=[2]
-    print '{5,7}->2 Confidence: %f' %get_confidence(basket_item,itemA,itemB)
-    itemC=[2,3,4]
-    itemD=[5]
-    print '{2,3,4}->5 Confidence: %f' %get_confidence(basket_item,itemC,itemD)
     
-    print 'freq item is :'
-    print get_freq_item(basket_item,5)
-    '''
 
             

@@ -1,10 +1,9 @@
 Data-mining
 ===========
 
-Datamining Algorithm by Python
+Data mining Algorithm
 
-Some Datamining Algorithm code by Python.
+Some data mining algorithm code with Python.
 
 A-Apriori
 
-SVD
